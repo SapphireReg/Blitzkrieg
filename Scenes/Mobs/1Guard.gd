@@ -8,7 +8,8 @@ var hp: int = hp_max
 
 var player = null 
 var playerIn = false
-onready var Sprite = $AnimatedSprite
+onready var sprite = $AnimatedSprite
+onready var blink = $BlinkAnimation
 
 func _physics_process(_delta):
 	motion.x = 0
@@ -20,16 +21,16 @@ func ai():
 	if playerIn: 
 		if compare_x() >= compare_y():
 			if compare_x() < 0: #right
-				Sprite.play("WalkRight")
+				sprite.play("WalkRight")
 			elif compare_x() > 0: #left
-				Sprite.play("WalkLeft")
+				sprite.play("WalkLeft")
 		elif compare_x() <= compare_y():
 			if compare_y() > 0: #up
-				Sprite.play("WalkUp")
+				sprite.play("WalkUp")
 			elif compare_y() < 0: #down
-				Sprite.play("WalkDown")
+				sprite.play("WalkDown")
 		else:
-			Sprite.stop()
+			sprite.stop()
 			motion.x = 0
 			motion.y = 0
 		motion = position.direction_to(player.position) * speed
@@ -45,8 +46,8 @@ func compare_y():
 	return y
 	
 func die():
-	Sprite.play("Death")
-	yield(Sprite, "animation finished")
+	sprite.play("Death")
+	yield(get_tree().create_timer(2.0), "timeout")
 	queue_free()
 	
 #Player Detection
@@ -55,13 +56,19 @@ func _on_PlayerDetection_body_entered(body):
 		print("player entered")
 		player = body
 		playerIn = true
+		
 
 #Damage
 func _on_DamageDetection_body_entered(body):
 	if body.get_collision_layer_bit(4):
-		playerIn = true
-		Global.sprite_flash($AnimatedSprite)
-		print("damage")
+		body.queue_free()
 		hp -= 50
 		if hp == 0:
 			die()
+		else:
+			blink.play("Start")
+			yield(get_tree().create_timer(0.2), "timeout")
+			blink.play("Stop")
+			Global.sprite_flash(sprite)
+			
+		

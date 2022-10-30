@@ -1,8 +1,13 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 2 - Guard.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Mobs/1Guard.gd" type="Script" id=3]
+[ext_resource path="res://WhiteColor.gdshader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=47]
+shader = ExtResource( 4 )
+shader_param/active = false
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
@@ -197,7 +202,7 @@ region = Rect2( 199, 1, 32, 32 )
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
-"loop": true,
+"loop": false,
 "name": "Death",
 "speed": 5.0
 }, {
@@ -228,15 +233,67 @@ extents = Vector2( 16, 16 )
 [sub_resource type="CircleShape2D" id=41]
 radius = 81.0
 
+[sub_resource type="Animation" id=50]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "Start"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=49]
+resource_name = "Stop"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
 [node name="1Guard" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 47 )
 frames = SubResource( 1 )
 animation = "WalkDown"
+frame = 3
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
+visible = false
 collision_layer = 4
 collision_mask = 19
 
@@ -244,10 +301,16 @@ collision_mask = 19
 shape = SubResource( 45 )
 
 [node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
+visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
 shape = SubResource( 41 )
+
+[node name="BlinkAnimation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 50 )
+anims/Start = SubResource( 48 )
+anims/Stop = SubResource( 49 )
 
 [connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
 [connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

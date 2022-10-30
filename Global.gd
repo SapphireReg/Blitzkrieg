@@ -7,4 +7,4 @@ func _ready():
 
 func sprite_flash(sprite) -> void:
 	var tween = create_tween()
-	tween.tween_property(sprite, "modulate", Color.white, 0.25)
+	tween.tween_property(sprite, "self_modulate", Color.white, 0.25)
