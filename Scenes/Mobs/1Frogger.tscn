@@ -309,7 +309,7 @@ extents = Vector2( 16, 16 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "WalkDown"
-frame = 2
+frame = 4
 playing = true
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="AnimatedSprite"]

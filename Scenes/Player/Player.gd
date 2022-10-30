@@ -49,8 +49,6 @@ func _process(_delta):
 	
 #for the bullet>>>>>>>>>>>>>>>>>
 func fire():
-	
-	
 	if Input.is_action_just_pressed("shoot"):
 		
 		if Global.direction == Vector2(1, 0): #right
@@ -73,11 +71,9 @@ func fire():
 			bullet.position.x = self.position.x + 25 * Global.direction.x
 	
 	
-
-
-func _on_Hurtbox_area_entered(hitbox):
+#func _on_Hurtbox_area_entered(hitbox):
 	
 	#var base_damage = hitbox.damage
 	#self.hp -= base_damage
 	#print(hitbox.get_parent().name + "hit touched" + name + "hurtbox dealt" + str(base_damage))
-	pass
+	#pass

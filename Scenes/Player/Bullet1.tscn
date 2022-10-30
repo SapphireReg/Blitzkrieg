@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player/Bullet1.gd" type="Script" id=2]
@@ -87,14 +87,11 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 2.5, 4 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 4.5, 3 )
+extents = Vector2( 4, 4 )
 
 [node name="Bullet1" type="KinematicBody2D"]
-collision_layer = 0
-collision_mask = 98
+collision_layer = 16
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -102,14 +99,6 @@ frames = SubResource( 9 )
 animation = "FireDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -0.5, 0 )
+position = Vector2( -0.5, 1.90735e-06 )
 rotation = -1.5708
 shape = SubResource( 10 )
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
-position = Vector2( -0.5, 0 )
-shape = SubResource( 11 )
