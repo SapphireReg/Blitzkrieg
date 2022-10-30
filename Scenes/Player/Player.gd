@@ -13,50 +13,65 @@ var hp_max: int = 100
 var hp: int = hp_max
 var defence: int = 0 
 #onready var end_of_gun = $EndOfGun
-var direction = Vector2(0, 0)
+
 
 func _ready():
 	pass 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = MAX_SPEED
-		direction = Vector2(1, 0)
+		Global.direction = Vector2(1, 0)
 		$AnimatedSprite.play("WalkRight")
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -MAX_SPEED
 		$AnimatedSprite.play("WalkLeft ")
-		direction = Vector2(-1, 0)
+		Global.direction = Vector2(-1, 0)
 	elif Input.is_action_pressed("ui_up"):
 		velocity.y = -MAX_SPEED
 		$AnimatedSprite.play("WalkUp")
-		direction = Vector2(0, -1)
+		Global.direction = Vector2(0, -1)
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = MAX_SPEED
 		$AnimatedSprite.play("WalkDown ")
-		direction = Vector2(0, 1)
+		Global.direction = Vector2(0, 1)
 	else:
+		yield($AnimatedSprite, "animation_finished")
+		$AnimatedSprite.stop()
 		velocity.x = 0
 		velocity.y = 0
-		$AnimatedSprite.stop()
+		
 	#fire()
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * MAX_SPEED)
 	#look_at(get_global_mouse_position())
 func _process(_delta):
 	fire()
+	
 #for the bullet>>>>>>>>>>>>>>>>>
 func fire():
+	
+	
 	if Input.is_action_just_pressed("shoot"):
 		
-		var f = BULLET.instance()
-		f.direction = direction
-		get_parent().add_child(f)
-		if direction.x == 0:
-			f.position.x = self.position.x
-			f.position.y = self.position.y + 25 * direction.x
-		elif direction.y == 0:
-			f.position.y = self.position.y
-			f.position.x = self.position.x + 25 * direction.x
+		if Global.direction == Vector2(1, 0): #right
+			$AnimatedSprite.play("FireRight")
+		elif Global.direction == Vector2(-1, 0): #left
+			$AnimatedSprite.play("FireLeft")
+		elif Global.direction == Vector2(0, -1): #up
+			$AnimatedSprite.play("FireUp")
+		elif Global.direction == Vector2(0, 1): #down
+			$AnimatedSprite.play("FireDown")
+			
+		var bullet = BULLET.instance()
+		get_parent().add_child(bullet)
+		#bullet fire direction
+		if Global.direction.x == 0:
+			bullet.position.x = self.position.x
+			bullet.position.y = self.position.y + 25 * Global.direction.y
+		elif Global.direction.y == 0:
+			bullet.position.y = self.position.y
+			bullet.position.x = self.position.x + 25 * Global.direction.x
+	
 	
 
 

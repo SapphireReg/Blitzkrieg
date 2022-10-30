@@ -98,11 +98,11 @@ collision_mask = 98
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-rotation = -1.5708
 frames = SubResource( 9 )
 animation = "FireDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -0.5, 0 )
 rotation = -1.5708
 shape = SubResource( 10 )
@@ -110,5 +110,6 @@ shape = SubResource( 10 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2( -0.5, 0 )
 shape = SubResource( 11 )
