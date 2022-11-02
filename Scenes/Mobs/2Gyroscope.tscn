@@ -218,20 +218,20 @@ script = ExtResource( 4 )
 material = SubResource( 29 )
 frames = SubResource( 17 )
 animation = "Moving"
-frame = 14
+frame = 7
 playing = true
 
-[node name="DamageDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 collision_mask = 23
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
 shape = SubResource( 30 )
 
-[node name="PlayerDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
 shape = SubResource( 31 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -242,5 +242,5 @@ anims/RESET = SubResource( 33 )
 anims/Start = SubResource( 34 )
 anims/Stop = SubResource( 35 )
 
-[connection signal="body_entered" from="AnimatedSprite/DamageDetection1" to="." method="_on_DamageDetection1_body_entered"]
-[connection signal="body_entered" from="AnimatedSprite/PlayerDetection1" to="." method="_on_PlayerDetection1_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

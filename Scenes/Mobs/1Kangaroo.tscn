@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 2 - Kangaroo.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=3]
-[ext_resource path="res://Scenes/Mobs/1Kangaroo.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Mobs/MobScript.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=45]
 shader = ExtResource( 3 )
@@ -333,20 +333,19 @@ script = ExtResource( 4 )
 material = SubResource( 45 )
 frames = SubResource( 1 )
 animation = "WalkLeft"
-frame = 2
 playing = true
 
-[node name="DamageDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 collision_mask = 23
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
 shape = SubResource( 46 )
 
-[node name="PlayerDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
 shape = SubResource( 47 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -357,5 +356,5 @@ anims/RESET = SubResource( 49 )
 anims/Start = SubResource( 50 )
 anims/Stop = SubResource( 51 )
 
-[connection signal="body_entered" from="AnimatedSprite/DamageDetection1" to="." method="_on_DamageDetection1_body_entered"]
-[connection signal="body_entered" from="AnimatedSprite/PlayerDetection1" to="." method="_on_PlayerDetection1_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

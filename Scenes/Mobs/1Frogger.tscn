@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 1 - Frogger.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Mobs/1Frogger.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Mobs/MobScript.gd" type="Script" id=3]
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=55]
@@ -376,17 +376,17 @@ animation = "WalkDown"
 frame = 1
 playing = true
 
-[node name="DamageDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 collision_mask = 23
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
 shape = SubResource( 7 )
 
-[node name="PlayerDetection1" type="Area2D" parent="AnimatedSprite"]
+[node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
 shape = SubResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -397,5 +397,5 @@ anims/RESET = SubResource( 56 )
 anims/Start = SubResource( 57 )
 anims/Stop = SubResource( 58 )
 
-[connection signal="body_entered" from="AnimatedSprite/DamageDetection1" to="." method="_on_DamageDetection1_body_entered"]
-[connection signal="body_entered" from="AnimatedSprite/PlayerDetection1" to="." method="_on_PlayerDetection1_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection1_body_entered"]

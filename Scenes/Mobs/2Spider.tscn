@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 3 - Spider.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=3]
-[ext_resource path="res://Scenes/Mobs/2Spider.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Mobs/MobScript.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=38]
 shader = ExtResource( 3 )
