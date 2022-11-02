@@ -4,52 +4,52 @@
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=73]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 345, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=74]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 378, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=75]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 411, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=76]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 444, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=77]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 477, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=78]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 510, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=79]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 543, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=80]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 576, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=81]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 609, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=82]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 642, 2, 32, 32 )
 
@@ -269,6 +269,7 @@ extents = Vector2( 16, 16 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 43 )
 animation = "WalkDown"
+frame = 3
 playing = true
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="AnimatedSprite"]

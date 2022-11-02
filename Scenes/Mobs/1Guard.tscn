@@ -11,52 +11,52 @@ shader = ExtResource( 4 )
 shader_param/active = false
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 345, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 378, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 411, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 444, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 477, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 510, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=37]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 543, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=38]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 576, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=39]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 609, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 642, 2, 32, 32 )
 
@@ -232,7 +232,7 @@ animations = [ {
 extents = Vector2( 16, 16 )
 
 [sub_resource type="CircleShape2D" id=41]
-radius = 81.0
+radius = 159.013
 
 [sub_resource type="Animation" id=50]
 length = 0.001
@@ -296,30 +296,32 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 16, 16 )
 
 [node name="1Guard" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 70
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 47 )
 frames = SubResource( 1 )
 animation = "WalkDown"
-frame = 4
+frame = 2
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
-visible = false
-collision_layer = 4
-collision_mask = 19
+collision_layer = 32
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
 shape = SubResource( 45 )
 
 [node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
-visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
+visible = false
 shape = SubResource( 41 )
 
 [node name="BlinkAnimation" type="AnimationPlayer" parent="."]

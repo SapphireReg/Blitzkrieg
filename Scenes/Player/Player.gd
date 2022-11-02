@@ -5,8 +5,14 @@ var velocity = Vector2.ZERO
 var HP_MAX = 100
 var hp = HP_MAX
 
+#node access
+onready var hpBar = get_parent().get_node("HUDNode/HUD/Control/HPBar")
+onready var tween = get_parent().get_node("HUDNode/HUD/Control/Tween")
+onready var blink = $BlinkAnimation
+
 func _ready():
-	pass 
+	hpBar.value = 100
+	
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = MAX_SPEED
@@ -34,6 +40,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity * MAX_SPEED)
 func _process(_delta):
 	fire()
+
 	
 #for the bullet>>>>>>>>>>>>>>>>>
 func fire():
@@ -58,9 +65,23 @@ func fire():
 			bullet.position.x = self.position.x + 25 * Global.direction.x
 	
 	
-#func _on_Hurtbox_area_entered(hitbox):
-	
-	#var base_damage = hitbox.damage
-	#self.hp -= base_damage
-	#print(hitbox.get_parent().name + "hit touched" + name + "hurtbox dealt" + str(base_damage))
-	#pass
+func hp_update(value):
+	hpBar.value += value
+	tween.interpolate_property(hpBar, "value", hp, hpBar.value, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	if not tween.is_active():
+		tween.start()
+
+
+func _on_HitBox_body_entered(body):
+	print("HIT")
+	if body.get_collision_layer_bit(2):
+		blink()
+		hp -= 10
+		hp_update(-10)
+		print(hp)
+		
+
+func blink():
+	blink.play("Start")
+	yield(get_tree().create_timer(0.2), "timeout")
+	blink.play("Stop")

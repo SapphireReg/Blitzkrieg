@@ -48,7 +48,8 @@ func compare_y():
 func die():
 	sprite.play("Death")
 	set_physics_process(false)
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(1.8), "timeout")
+	set_physics_process(true)
 	queue_free()
 	
 #Player Detection
@@ -60,7 +61,9 @@ func _on_PlayerDetection_body_entered(body):
 
 #Damage
 func _on_DamageDetection_body_entered(body):
+	print(body)
 	if body.get_collision_layer_bit(4):
+		print("Damage")
 		body.queue_free()
 		hp -= 50
 		if hp <= 0:

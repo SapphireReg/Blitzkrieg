@@ -10,52 +10,52 @@ shader = ExtResource( 4 )
 shader_param/active = false
 
 [sub_resource type="AtlasTexture" id=43]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 345, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=44]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 378, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 411, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=46]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 444, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=47]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 477, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=48]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 510, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=49]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 543, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=50]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 576, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=51]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 609, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=52]
-flags = 4
+flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 642, 2, 32, 32 )
 
@@ -366,19 +366,19 @@ tracks/0/keys = {
 
 [node name="1Frogger" type="KinematicBody2D"]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 70
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 55 )
 frames = SubResource( 6 )
 animation = "WalkDown"
-frame = 4
+frame = 2
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
-collision_layer = 4
-collision_mask = 23
+collision_layer = 32
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
 shape = SubResource( 7 )
