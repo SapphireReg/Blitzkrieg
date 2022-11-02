@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-var speed = 50
-var motion = Vector2.ZERO
-
-var hp_max: int = 100
+export var speed = 50
+export var hp_max: int = 100
 var hp: int = hp_max
 
+var motion = Vector2.ZERO
 var player = null 
 var playerIn = false
+
 onready var sprite = $AnimatedSprite
 onready var blink = $BlinkAnimation
 
@@ -16,7 +16,6 @@ func _physics_process(_delta):
 	motion.x = 0
 	motion.y = 0
 	ai()
-	
 
 func ai():
 	if playerIn: 
@@ -49,7 +48,8 @@ func compare_y():
 func die():
 	sprite.play("Death")
 	set_physics_process(false)
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(1.8), "timeout")
+	set_physics_process(true)
 	queue_free()
 	
 #Player Detection
@@ -58,19 +58,20 @@ func _on_PlayerDetection_body_entered(body):
 		print("player entered")
 		player = body
 		playerIn = true
-		
 
 #Damage
 func _on_DamageDetection_body_entered(body):
+	print(body)
 	if body.get_collision_layer_bit(4):
+		print("Damage")
 		body.queue_free()
 		hp -= 50
 		if hp <= 0:
 			die()
 		else:
-			blink.play("Start")
-			yield(get_tree().create_timer(0.2), "timeout")
-			blink.play("Stop")
-			Global.sprite_flash(sprite)
-			
-		
+			blink()
+
+func blink():
+	blink.play("Start")
+	yield(get_tree().create_timer(0.2), "timeout")
+	blink.play("Stop")
