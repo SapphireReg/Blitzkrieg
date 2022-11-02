@@ -11,6 +11,7 @@ var playerIn = false
 onready var sprite = $AnimatedSprite
 onready var blink = $BlinkAnimation
 
+
 func _physics_process(_delta):
 	motion.x = 0
 	motion.y = 0
@@ -47,6 +48,7 @@ func compare_y():
 	
 func die():
 	sprite.play("Death")
+	set_physics_process(false)
 	yield(get_tree().create_timer(2.0), "timeout")
 	queue_free()
 	
@@ -63,7 +65,7 @@ func _on_DamageDetection_body_entered(body):
 	if body.get_collision_layer_bit(4):
 		body.queue_free()
 		hp -= 50
-		if hp == 0:
+		if hp <= 0:
 			die()
 		else:
 			blink.play("Start")

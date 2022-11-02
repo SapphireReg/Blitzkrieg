@@ -1,19 +1,10 @@
 extends KinematicBody2D
 
-const ACCELERATION = 500 #if want to add this feature watch part 2 again
 const MAX_SPEED = 80
-const FRICTION = 500
-var bullet_speed = 800
-#export (PackedScene) var Bullet
-const BULLET = preload("res://Scenes/Player/Bullet1.tscn")
-var can_fire = true
-#var rate_of_fire = 1
 var velocity = Vector2.ZERO
-var hp_max: int = 100
-var hp: int = hp_max
-var defence: int = 0 
-#onready var end_of_gun = $EndOfGun
-
+var HP_MAX = 100
+var hp = HP_MAX
+var coins = 0
 
 func _ready():
 	pass 
@@ -40,17 +31,14 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.y = 0
 		
-	#fire()
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * MAX_SPEED)
-	#look_at(get_global_mouse_position())
 func _process(_delta):
 	fire()
 	
 #for the bullet>>>>>>>>>>>>>>>>>
 func fire():
 	if Input.is_action_just_pressed("shoot"):
-		
 		if Global.direction == Vector2(1, 0): #right
 			$AnimatedSprite.play("FireRight")
 		elif Global.direction == Vector2(-1, 0): #left
@@ -60,7 +48,7 @@ func fire():
 		elif Global.direction == Vector2(0, 1): #down
 			$AnimatedSprite.play("FireDown")
 			
-		var bullet = BULLET.instance()
+		var bullet = Global.BULLET.instance()
 		get_parent().add_child(bullet)
 		#bullet fire direction
 		if Global.direction.x == 0:
