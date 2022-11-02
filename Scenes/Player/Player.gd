@@ -4,7 +4,6 @@ const MAX_SPEED = 80
 var velocity = Vector2.ZERO
 var HP_MAX = 100
 var hp = HP_MAX
-var coins = 0
 
 func _ready():
 	pass 

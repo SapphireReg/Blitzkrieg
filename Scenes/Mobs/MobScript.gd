@@ -16,7 +16,6 @@ func _physics_process(_delta):
 	motion.x = 0
 	motion.y = 0
 	ai()
-	
 
 func ai():
 	if playerIn: 

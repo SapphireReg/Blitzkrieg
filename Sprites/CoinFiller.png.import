@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png-50b0d6896176b2a2d33420b894840ab1.stex"
+path="res://.import/CoinFiller.png-e50bbc9237fcfa9d74664ab8cde18f49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png"
-dest_files=[ "res://.import/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png-50b0d6896176b2a2d33420b894840ab1.stex" ]
+source_file="res://Sprites/CoinFiller.png"
+dest_files=[ "res://.import/CoinFiller.png-e50bbc9237fcfa9d74664ab8cde18f49.stex" ]
 
 [params]
 
