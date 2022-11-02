@@ -373,7 +373,7 @@ script = ExtResource( 3 )
 material = SubResource( 55 )
 frames = SubResource( 6 )
 animation = "WalkDown"
-frame = 1
+frame = 4
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -398,4 +398,4 @@ anims/Start = SubResource( 57 )
 anims/Stop = SubResource( 58 )
 
 [connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
-[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection1_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]
