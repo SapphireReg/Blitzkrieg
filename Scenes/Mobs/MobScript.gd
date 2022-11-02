@@ -73,13 +73,3 @@ func blink():
 	blink.play("Start")
 	yield(get_tree().create_timer(0.2), "timeout")
 	blink.play("Stop")
-
-
-
-
-func _on_DamageDetection1_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_PlayerDetection1_body_entered(body):
-	pass # Replace with function body.
