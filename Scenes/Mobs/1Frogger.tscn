@@ -1,7 +1,13 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 1 - Frogger.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Mobs/1Frogger.gd" type="Script" id=3]
+[ext_resource path="res://WhiteColor.gdshader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=55]
+shader = ExtResource( 4 )
+shader_param/active = false
 
 [sub_resource type="AtlasTexture" id=43]
 flags = 4
@@ -304,14 +310,92 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 16, 16 )
 
-[node name="1Frogger" type="Node2D"]
+[sub_resource type="CircleShape2D" id=53]
+radius = 202.299
+
+[sub_resource type="RectangleShape2D" id=54]
+
+[sub_resource type="Animation" id=56]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "Start"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "Stop"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="1Frogger" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 55 )
 frames = SubResource( 6 )
 animation = "WalkDown"
+frame = 1
 playing = true
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="AnimatedSprite"]
+[node name="DamageDetection1" type="Area2D" parent="AnimatedSprite"]
+collision_layer = 4
+collision_mask = 23
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection1"]
 shape = SubResource( 7 )
+
+[node name="PlayerDetection1" type="Area2D" parent="AnimatedSprite"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection1"]
+shape = SubResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 54 )
+
+[node name="BlinkAnimation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 56 )
+anims/Start = SubResource( 57 )
+anims/Stop = SubResource( 58 )
+
+[connection signal="body_entered" from="AnimatedSprite/DamageDetection1" to="." method="_on_DamageDetection1_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection1" to="." method="_on_PlayerDetection1_body_entered"]
