@@ -4367,3 +4367,6 @@ tile_data = PoolIntArray( -1179534, 536870950, 0, -1048464, 19, 0, -1048463, 4, 
 [node name="1Guard" parent="." instance=ExtResource( 3 )]
 position = Vector2( 230, -4 )
 collision_mask = 7
+
+[node name="1Guard2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 230, 57 )

@@ -6,6 +6,7 @@
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=47]
+resource_local_to_scene = true
 shader = ExtResource( 4 )
 shader_param/active = false
 
@@ -247,6 +248,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 47 ) ]
+}
 
 [sub_resource type="Animation" id=48]
 resource_name = "Start"
@@ -289,7 +302,7 @@ script = ExtResource( 3 )
 material = SubResource( 47 )
 frames = SubResource( 1 )
 animation = "WalkDown"
-frame = 3
+frame = 2
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]

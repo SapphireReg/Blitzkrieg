@@ -68,9 +68,11 @@ func _on_DamageDetection_body_entered(body):
 		if hp <= 0:
 			die()
 		else:
-			blink.play("Start")
-			yield(get_tree().create_timer(0.2), "timeout")
-			blink.play("Stop")
-			Global.sprite_flash(sprite)
-			
-		
+			blink()
+
+func blink():
+	blink.play("Start")
+	print(self.to_string())
+	yield(get_tree().create_timer(0.2), "timeout")
+	blink.play("Stop")
+
