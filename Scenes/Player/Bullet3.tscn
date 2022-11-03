@@ -1,44 +1,37 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Player/Bullet1.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 42, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 60, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 33, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 60, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 24, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 6, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 69, 236, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 15, 236, 8, 8 )
 
@@ -88,13 +81,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 4, 4 )
 
-[node name="Bullet3" type="Node2D"]
+[node name="Bullet3" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 34
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
 animation = "FireDown"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 10 )
