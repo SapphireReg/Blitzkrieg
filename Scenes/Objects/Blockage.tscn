@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Objects/Obstacle.tscn" type="PackedScene" id=1]
+
+[node name="Blockage1" type="Node2D"]
+position = Vector2( 393, -152 )
+
+[node name="ObstacleNode" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 13, -3 )
+
+[node name="ObstacleNode2" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 13, 17 )
+
+[node name="ObstacleNode3" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 13, -23 )
