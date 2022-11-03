@@ -1,0 +1,21 @@
+{
+	"color": "#ff2fa113",
+	"description": "",
+	"display_name": "Dr. Peace",
+	"display_name_bool": true,
+	"id": "character-1667502575.json",
+	"mirror_portraits": false,
+	"name": "Peace-Maker",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://gameicons/Player/Amiga Amiga CD32 - Chaos Engine Amiga CD322 - Portraits.png"
+		}
+	],
+	"scale": 400,
+	"theme": ""
+}

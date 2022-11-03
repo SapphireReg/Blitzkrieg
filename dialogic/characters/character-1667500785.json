@@ -1,0 +1,21 @@
+{
+	"color": "#ffb03434",
+	"description": "",
+	"display_name": "Shark",
+	"display_name_bool": true,
+	"id": "character-1667500785.json",
+	"mirror_portraits": false,
+	"name": "Shark",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://gameicons/Player/Amiga Amiga CD32 - Chaos Engine Amiga CD321 - Portraits.png"
+		}
+	],
+	"scale": 400,
+	"theme": ""
+}

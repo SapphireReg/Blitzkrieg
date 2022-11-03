@@ -1,0 +1,21 @@
+{
+	"color": "#ff575ccf",
+	"description": "",
+	"display_name": "The EGG",
+	"display_name_bool": true,
+	"id": "character-1667503290.json",
+	"mirror_portraits": true,
+	"name": "The EGG",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://gameicons/Player/Amiga Amiga CD32 - Chaos Engine Amiga CD323- Portraits.png"
+		}
+	],
+	"scale": 400,
+	"theme": ""
+}

@@ -56,7 +56,7 @@ margin_bottom = 337.0
 custom_fonts/font = SubResource( 10 )
 text = "Play"
 flat = true
-reference_path = "res://Scenes/World/Lvl1_Landing.tscn"
+reference_path = "res://Themes/DialogScene.tscn"
 start_focused = true
 
 [node name="MenuHowToPlay" parent="." instance=ExtResource( 11 )]

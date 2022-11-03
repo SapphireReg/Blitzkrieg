@@ -1,0 +1,21 @@
+{
+	"color": "#ff1c6ea4",
+	"description": "",
+	"display_name": "Captain JR",
+	"display_name_bool": true,
+	"id": "character-1667498986.json",
+	"mirror_portraits": false,
+	"name": "Captain JR",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://gameicons/Player/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Portraits.png"
+		}
+	],
+	"scale": 400,
+	"theme": ""
+}
