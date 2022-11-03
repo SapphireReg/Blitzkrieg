@@ -4,42 +4,34 @@
 [ext_resource path="res://Scenes/Player/Bullet1.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 42, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 51, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 33, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 60, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 24, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 6, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=7]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 69, 209, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=8]
-flags = 2
 atlas = ExtResource( 1 )
 region = Rect2( 15, 209, 8, 8 )
 

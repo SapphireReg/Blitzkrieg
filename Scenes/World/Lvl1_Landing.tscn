@@ -4336,14 +4336,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 106/shapes = [  ]
 106/z_index = 0
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=175]
 flags = 4
 atlas = ExtResource( 12 )
 region = Rect2( 103, 1, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 175 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -4395,6 +4395,7 @@ tile_data = PoolIntArray( -1179534, 536870950, 0, -1048464, 19, 0, -1048463, 4, 
 
 [node name="1Guard" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 230, -4 )
+hp = 200
 
 [node name="1Frogger" parent="Mobs" instance=ExtResource( 4 )]
 position = Vector2( 1273, -287 )
@@ -4480,6 +4481,27 @@ scale = Vector2( 2, 2 )
 [node name="GoldCoin1" parent="Coins" instance=ExtResource( 13 )]
 position = Vector2( -20, -263 )
 
+[node name="GoldCoin5" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin6" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin7" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin8" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin9" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin10" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
+[node name="GoldCoin11" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 39, 1 )
+
 [node name="GoldCoin2" parent="Coins" instance=ExtResource( 13 )]
 position = Vector2( 485, -289 )
 
@@ -4490,7 +4512,7 @@ position = Vector2( 1135, 327 )
 position = Vector2( 1888, 172 )
 
 [node name="MedKit" parent="." instance=ExtResource( 14 )]
-position = Vector2( 253, 57 )
+position = Vector2( 1367, 236 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 

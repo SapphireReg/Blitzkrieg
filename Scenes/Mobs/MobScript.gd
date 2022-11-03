@@ -1,8 +1,7 @@
 extends KinematicBody2D
 
 export var speed = 50
-export var hp_max: int = 100
-var hp: int = hp_max
+export var hp: int = 100
 
 var motion = Vector2.ZERO
 var player = null 
@@ -61,11 +60,11 @@ func _on_PlayerDetection_body_entered(body):
 
 #Damage
 func _on_DamageDetection_body_entered(body):
-	print(body)
+	print(hp)
 	if body.get_collision_layer_bit(4):
 		print("Damage")
 		body.queue_free()
-		hp -= 50
+		hp -= Global.bulletDmg
 		if hp <= 0:
 			die()
 		else:
