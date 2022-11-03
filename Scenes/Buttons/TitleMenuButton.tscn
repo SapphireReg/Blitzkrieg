@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Themes/Selected_button_theme.tres" type="StyleBox" id=1]
+[ext_resource path="res://Themes/notselected_button_theme.tres" type="StyleBox" id=2]
+[ext_resource path="res://Scenes/Buttons/TitleMenuButton.gd" type="Script" id=3]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Button" type="Button"]
+margin_left = 447.0
+margin_top = 205.0
+margin_right = 558.0
+margin_bottom = 241.0
+theme = SubResource( 1 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/normal = ExtResource( 2 )
+script = ExtResource( 3 )
