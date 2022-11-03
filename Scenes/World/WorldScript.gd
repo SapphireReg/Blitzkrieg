@@ -6,14 +6,15 @@ onready var blockage1 = $Blockage1/ObstacleNode/AnimatedSprite
 func _ready():
 	pass
 
-
 func _on_KeyPickUp1_body_entered(body):
-	$Key1.queue_free()
-	remove_blockage($Blockage1)
+	if body.get_collision_layer_bit(0):
+		$Key1.queue_free()
+		remove_blockage($Blockage1)
 	
 func _on_KeyPickUp2_body_entered(body):
-	$Key2.queue_free()
-	remove_blockage($Blockage2)
+	if body.get_collision_layer_bit(0):
+		$Key2.queue_free()
+		remove_blockage($Blockage2)
 
 func remove_blockage(blockage):
 	for block in blockage.get_children():

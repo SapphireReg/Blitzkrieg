@@ -2,8 +2,7 @@ extends KinematicBody2D
 
 const MAX_SPEED = 80
 var velocity = Vector2.ZERO
-var HP_MAX = 100
-var hp = HP_MAX
+
 
 #node access
 onready var hpBar = get_parent().get_node("HUDNode/HUD/Control/HPBar")
@@ -40,7 +39,6 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity * MAX_SPEED)
 func _process(_delta):
 	fire()
-
 	
 #for the bullet>>>>>>>>>>>>>>>>>
 func fire():
@@ -64,22 +62,19 @@ func fire():
 			bullet.position.y = self.position.y
 			bullet.position.x = self.position.x + 25 * Global.direction.x
 	
-	
 func hp_update(value):
 	hpBar.value += value
-	tween.interpolate_property(hpBar, "value", hp, hpBar.value, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.interpolate_property(hpBar, "value", Global.playerHp, hpBar.value, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	if not tween.is_active():
 		tween.start()
-
 
 func _on_HitBox_body_entered(body):
 	print("HIT")
 	if body.get_collision_layer_bit(2):
 		blink()
-		hp -= 10
+		Global.playerHp -= 10
 		hp_update(-10)
-		print(hp)
-		
+		print(Global.playerHp)
 
 func blink():
 	blink.play("Start")
