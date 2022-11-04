@@ -10,3 +10,5 @@ func _on_Area2D_body_entered(body):
 		player.hp_update(50)
 		Global.playerHp += 50
 		queue_free()
+		if Global.playerHp > 100:
+			Global.playerHp = 100

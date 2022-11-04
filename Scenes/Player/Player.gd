@@ -10,7 +10,7 @@ onready var tween = get_parent().get_node("HUDNode/HUD/Control/Tween")
 onready var blink = $BlinkAnimation
 
 func _ready():
-	hpBar.value = 100
+	hpBar.value = Global.playerHp
 	
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):

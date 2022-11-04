@@ -4481,27 +4481,6 @@ scale = Vector2( 2, 2 )
 [node name="GoldCoin1" parent="Coins" instance=ExtResource( 13 )]
 position = Vector2( -20, -263 )
 
-[node name="GoldCoin5" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin6" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin7" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin8" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin9" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin10" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
-[node name="GoldCoin11" parent="Coins" instance=ExtResource( 13 )]
-position = Vector2( 39, 1 )
-
 [node name="GoldCoin2" parent="Coins" instance=ExtResource( 13 )]
 position = Vector2( 485, -289 )
 

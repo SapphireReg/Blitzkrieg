@@ -1,6 +1,5 @@
 extends Node2D
 
-onready var blockage1 = $Blockage1/ObstacleNode/AnimatedSprite
 onready var player = get_node("Player")
 onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bullet")
 
@@ -16,6 +15,21 @@ func _on_KeyPickUp2_body_entered(body):
 	if body.get_collision_layer_bit(0):
 		$Key2.queue_free()
 		remove_blockage($Blockage2)
+		
+func _on_KeyPickUp3_body_entered(body):
+	if body.get_collision_layer_bit(0):
+		$Key3.queue_free()
+		remove_blockage($Blockage3)
+		
+func _on_KeyPickUp4_body_entered(body):
+	if body.get_collision_layer_bit(0):
+		$Key4.queue_free()
+		remove_blockage($Blockage4)
+		
+func _on_KeyPickUp5_body_entered(body):
+	if body.get_collision_layer_bit(0):
+		$Key5.queue_free()
+		remove_blockage($Blockage5)
 
 func remove_blockage(blockage):
 	for block in blockage.get_children():
@@ -35,7 +49,3 @@ func check_coins():
 			Global.bulletDmg = 150
 			Global.BULLET = preload("res://Scenes/Player/Bullet3.tscn")
 			HUDBullet.play("Bullet3")
-
-
-
-
