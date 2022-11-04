@@ -2,7 +2,7 @@ extends Node2D
 
 onready var blockage1 = $Blockage1/ObstacleNode/AnimatedSprite
 onready var player = get_node("Player")
-
+onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bullet")
 
 func _ready():
 	pass
@@ -23,7 +23,18 @@ func remove_blockage(blockage):
 	yield(get_tree().create_timer(1), "timeout")
 	blockage.queue_free()
 
-
+func check_coins():
+	if Global.coins == 7:
+		Global.bullet_level += 1
+		Global.coins = 0
+		if Global.bullet_level == 2:
+			Global.bulletDmg = 75
+			Global.BULLET = preload("res://Scenes/Player/Bullet2.tscn")
+			HUDBullet.play("Bullet2")
+		elif Global.bullet_level == 3:
+			Global.bulletDmg = 150
+			Global.BULLET = preload("res://Scenes/Player/Bullet3.tscn")
+			HUDBullet.play("Bullet3")
 
 
 
