@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var blockage1 = $Blockage1/ObstacleNode/AnimatedSprite
+onready var player = get_node("Player")
 
 
 func _ready():

@@ -41,12 +41,13 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 margin_left = 42.0
-margin_top = 37.0
+margin_top = 119.0
 margin_right = 969.0
-margin_bottom = 181.0
+margin_bottom = 263.0
 custom_colors/font_color = Color( 0.333333, 0.14902, 0.137255, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Blitzkrieg"
+align = 1
 
 [node name="MenuPlay" parent="." instance=ExtResource( 11 )]
 margin_left = 450.0
