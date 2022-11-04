@@ -1,26 +1,6 @@
 {
 	"events": [
 		{
-			"animation": "[Default]",
-			"animation_length": 0,
-			"change_mirror_portrait": false,
-			"change_z_index": false,
-			"character": "character-1667498986.json",
-			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "Default",
-			"portrait_definition": "",
-			"position": {
-				"0": true,
-				"1": false,
-				"2": false,
-				"3": false,
-				"4": false
-			},
-			"type": 0,
-			"z_index": 0
-		},
-		{
 			"character": "",
 			"event_id": "dialogic_010",
 			"options": [
@@ -48,16 +28,111 @@
 			"value": ""
 		},
 		{
-			"character": "character-1667498986.json",
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "These monsters have ruled our Planet for 100 years!"
+			"text": "Earth has fallen from an AI takeover. It is now infested with robots, genetically modified creatures, and a super AI that controls everything. "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It has been 100 years since humans have evacuated Earth and lived on different planets trying to recuperate."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Since then, humans have been training and preparing for the time they retake earth. Now… is the TIME.\nJR, the main character, is part of a specialized military team called BLITZKRIEG."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "While all combatants are scattered throughout earth to clear enemies.  "
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "JR, the best among the best, was tasked for the most important and dangerous task…"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To dive straight into the belly of the beast and defeat the super AI that started everything, Pandora."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1667498986.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
 		},
 		{
 			"character": "character-1667498986.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "It is the time to take our HOME back..."
+			"text": "Well this is it everyone…"
 		},
 		{
 			"animation": "[Default]",
@@ -108,13 +183,7 @@
 			"character": "character-1667500785.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Indeed!!!"
-		},
-		{
-			"character": "character-1667500785.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "It is the TIME..."
+			"text": " I hope we all make it out alive and bring back earth into the hands of humans…"
 		},
 		{
 			"animation": "[Default]",
@@ -165,13 +234,7 @@
 			"character": "character-1667502575.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hello There!!!"
-		},
-		{
-			"character": "character-1667502575.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Thats why you have been chosen for this MISSION, Captain."
+			"text": "JR, you have the most difficult task out of all of us, It’s almost like suicide mission. But you’re the best Blitzkrieg agent, I’m sure you’ll manage to pull through."
 		},
 		{
 			"animation": "[Default]",
@@ -203,7 +266,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1667503290.json",
+			"character": "character-1667498986.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -219,23 +282,17 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1667503290.json",
+			"character": "character-1667498986.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "We believe in you, Captain."
-		},
-		{
-			"character": "character-1667503290.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You are a true warrior."
+			"text": "Damn right I will. This is our last shot, humanity has sacrificed a lot of bring everything and everyone here right now for this war."
 		},
 		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1667503290.json",
+			"character": "character-1667498986.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "",
@@ -260,7 +317,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1667498986.json",
+			"character": "character-1667500785.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -276,17 +333,17 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1667498986.json",
+			"character": "character-1667500785.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "It's time to LOAD my WEAPON. "
+			"text": "Ok, enough chit-chat. Let’s go kick Pandora’s robotic ass. Everybody in position for landing."
 		},
 		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1667498986.json",
+			"character": "character-1667500785.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",

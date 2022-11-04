@@ -20,14 +20,11 @@ margin_left = 226.0
 margin_top = 468.0
 margin_right = -192.0
 margin_bottom = -5.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 timeline = "timeline-1667499478.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -265.0
+margin_left = -263.0
 margin_top = -303.0
-margin_right = 1102.0
+margin_right = 1104.0
 margin_bottom = 693.0
 color = Color( 0.505882, 0.458824, 0.321569, 0.486275 )
