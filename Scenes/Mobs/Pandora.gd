@@ -15,18 +15,20 @@ func _physics_process(_delta):
 	motion.y = 0
 	ai()
 
+
 func ai():
 	if playerIn:
-		if compare_x() >= compare_y():
-			if compare_x() < 0: #right
-				sprite.play("WalkRight")
-			elif compare_x() > 0: #left
-				sprite.play("WalkLeft")
-		elif compare_x() <= compare_y():
-			if compare_y() > 0: #up
+		print(global_position - player.global_position)
+		if abs(compare_x()) <= abs(compare_y()):
+			if compare_y() < 0: #up
 				sprite.play("WalkUp")
-			elif compare_y() < 0: #down
+			elif compare_y() > 0: #down
 				sprite.play("WalkDown")
+		elif abs(compare_x()) >= abs(compare_y()):
+			if compare_x() > 0: #right
+				sprite.play("WalkRight")
+			elif compare_x() < 0: #left
+				sprite.play("WalkLeft")
 		else:
 			sprite.stop()
 			motion.x = 0
@@ -36,11 +38,11 @@ func ai():
 		motion = move_and_slide(motion * speed)
 
 func compare_x():
-	var x = global_position.x - player.global_position.x
+	var x =  player.global_position.x - global_position.x
 	return x
 	
 func compare_y():
-	var y = global_position.y - player.global_position.y
+	var y = player.global_position.y - global_position.y
 	return y
 	
 func die():

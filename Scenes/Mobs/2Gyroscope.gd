@@ -25,7 +25,6 @@ func ai():
 		motion = motion.normalized()
 		motion = move_and_slide(motion * speed)
 	else:
-		sprite.stop()
 		motion.x = 0
 		motion.y = 0
 	
