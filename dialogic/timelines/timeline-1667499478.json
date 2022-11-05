@@ -30,7 +30,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 0.5
 		},
 		{
 			"animation": "[Default]",
@@ -109,7 +109,7 @@
 			"z_index": 0
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_in.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -135,7 +135,7 @@
 			"text": "Well this is it everyone…"
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_out.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -157,10 +157,10 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 0.5
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_in.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -186,7 +186,7 @@
 			"text": " I hope we all make it out alive and bring back earth into the hands of humans…"
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_out.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -208,10 +208,10 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 0.3
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_in.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -234,10 +234,16 @@
 			"character": "character-1667502575.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "JR, you have the most difficult task out of all of us, It’s almost like suicide mission. But you’re the best Blitzkrieg agent, I’m sure you’ll manage to pull through."
+			"text": "JR, you have the most difficult task out of all of us, It’s almost like suicide mission."
 		},
 		{
-			"animation": "[Default]",
+			"character": "character-1667502575.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But you’re the best Blitzkrieg agent, I’m sure you’ll manage to pull through."
+		},
+		{
+			"animation": "instant_out.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -259,10 +265,10 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 0.5
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_in.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -288,7 +294,7 @@
 			"text": "Damn right I will. This is our last shot, humanity has sacrificed a lot of bring everything and everyone here right now for this war."
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_out.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -310,10 +316,10 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 0.5
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_in.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -339,7 +345,7 @@
 			"text": "Ok, enough chit-chat. Let’s go kick Pandora’s robotic ass. Everybody in position for landing."
 		},
 		{
-			"animation": "[Default]",
+			"animation": "instant_out.gd",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
@@ -361,7 +367,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1,
+			"wait_seconds": 0.5,
 			"waiting_skippable": false
 		},
 		{

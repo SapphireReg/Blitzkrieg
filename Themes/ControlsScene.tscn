@@ -12,7 +12,7 @@
 [ext_resource path="res://gameicons/PNG/White/1x/arrowRight.png" type="Texture" id=10]
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://gameicons/mouse2_left_button.png" type="Texture" id=12]
-[ext_resource path="res://gameicons/EnemySpritesForHowToPlay/Coin-Items.png" type="Texture" id=13]
+[ext_resource path="res://gameicons/coin.png" type="Texture" id=13]
 [ext_resource path="res://gameicons/EnemySpritesForHowToPlay/MediItems.png" type="Texture" id=14]
 [ext_resource path="res://gameicons/EnemySpritesForHowToPlay/Key-Items.png" type="Texture" id=15]
 
