@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu Music - Backio Relax.mp3-0c6ccfe7cef29e0a80a7afa8b0aed90b.mp3str"
+
+[deps]
+
+source_file="res://Audio/Menu Music - Backio Relax.mp3"
+dest_files=[ "res://.import/Menu Music - Backio Relax.mp3-0c6ccfe7cef29e0a80a7afa8b0aed90b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

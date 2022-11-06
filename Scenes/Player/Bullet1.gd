@@ -6,6 +6,7 @@ var velocity = Vector2()
 
 func _ready():
 	velocity = SPEED * Global.direction
+	$AudioStreamPlayer2D.play()
 	
 	#bullet rotate
 	if Global.direction == Vector2(1, 0): #right

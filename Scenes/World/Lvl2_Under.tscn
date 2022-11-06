@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileSet/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 2 Tileset.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/Objects/GoldCoin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Objects/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sprites/Items.png" type="Texture" id=13]
+[ext_resource path="res://Audio/Level 2 - Club Life.mp3" type="AudioStream" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=24]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -4665,6 +4666,10 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 zoom = Vector2( 0.5, 0.5 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
 
 [connection signal="body_entered" from="Key1/AnimatedSprite/KeyPickUp1" to="." method="_on_KeyPickUp1_body_entered"]
 [connection signal="body_entered" from="Key2/AnimatedSprite/KeyPickUp2" to="." method="_on_KeyPickUp2_body_entered"]

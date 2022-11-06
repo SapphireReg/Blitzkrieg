@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BoulderDropSFX.ogg-436438a1d32f2ebf8529b6e311afbc3e.oggstr"
+
+[deps]
+
+source_file="res://Audio/BoulderDropSFX.ogg"
+dest_files=[ "res://.import/BoulderDropSFX.ogg-436438a1d32f2ebf8529b6e311afbc3e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

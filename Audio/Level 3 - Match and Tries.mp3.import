@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Level 3 - Match and Tries.mp3-7bce27264e38408ca1a26edbe9f43e82.mp3str"
+
+[deps]
+
+source_file="res://Audio/Level 3 - Match and Tries.mp3"
+dest_files=[ "res://.import/Level 3 - Match and Tries.mp3-7bce27264e38408ca1a26edbe9f43e82.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

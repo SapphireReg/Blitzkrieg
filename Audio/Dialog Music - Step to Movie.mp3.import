@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialog Music - Step to Movie.mp3-db5c3640d884319de6931f3c13202823.mp3str"
+
+[deps]
+
+source_file="res://Audio/Dialog Music - Step to Movie.mp3"
+dest_files=[ "res://.import/Dialog Music - Step to Movie.mp3-db5c3640d884319de6931f3c13202823.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

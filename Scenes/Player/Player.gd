@@ -75,8 +75,19 @@ func _on_HitBox_body_entered(body):
 		Global.playerHp -= 10
 		hp_update(-10)
 		print(Global.playerHp)
+		if Global.playerHp <= 0:
+			death()
 
 func blink():
+	$hurtSFX.play()
 	blink.play("Start")
 	yield(get_tree().create_timer(0.2), "timeout")
 	blink.play("Stop")
+	
+func death():
+	set_physics_process(false)
+	$AnimatedSprite.play("Death")
+	$hurtSFX.play()
+	$pandoraVoiceSFX.play()
+	yield($AnimatedSprite, "animation_finished")
+	get_tree().change_scene("res://Scenes/World/GameOver.tscn")

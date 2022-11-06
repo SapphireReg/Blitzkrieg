@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/1MobSFX2.ogg-976e872efd51f0057df2656b4a386204.oggstr"
+
+[deps]
+
+source_file="res://Audio/1MobSFX2.ogg"
+dest_files=[ "res://.import/1MobSFX2.ogg-976e872efd51f0057df2656b4a386204.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

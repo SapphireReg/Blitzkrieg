@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/KeyPickupSFX.mp3-d62238fe2d2223c370187bbe09df6381.mp3str"
+
+[deps]
+
+source_file="res://Audio/KeyPickupSFX.mp3"
+dest_files=[ "res://.import/KeyPickupSFX.mp3-d62238fe2d2223c370187bbe09df6381.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

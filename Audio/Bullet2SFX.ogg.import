@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bullet2SFX.ogg-eaf64f8a84b75b0416357ddd9cef3d6b.oggstr"
+
+[deps]
+
+source_file="res://Audio/Bullet2SFX.ogg"
+dest_files=[ "res://.import/Bullet2SFX.ogg-eaf64f8a84b75b0416357ddd9cef3d6b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

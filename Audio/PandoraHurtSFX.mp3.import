@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PandoraHurtSFX.mp3-e312478918d2153158fd43b610a19162.mp3str"
+
+[deps]
+
+source_file="res://Audio/PandoraHurtSFX.mp3"
+dest_files=[ "res://.import/PandoraHurtSFX.mp3-e312478918d2153158fd43b610a19162.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

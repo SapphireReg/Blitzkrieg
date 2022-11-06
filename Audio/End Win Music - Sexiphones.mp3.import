@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/End Win Music - Sexiphones.mp3-b9e3a1d8e0ea9d43a2b4bdc89a9c10a2.mp3str"
+
+[deps]
+
+source_file="res://Audio/End Win Music - Sexiphones.mp3"
+dest_files=[ "res://.import/End Win Music - Sexiphones.mp3-b9e3a1d8e0ea9d43a2b4bdc89a9c10a2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
