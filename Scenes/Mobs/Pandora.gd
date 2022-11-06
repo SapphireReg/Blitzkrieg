@@ -51,6 +51,8 @@ func die():
 	yield(get_tree().create_timer(1.8), "timeout")
 	set_physics_process(true)
 	queue_free()
+	Physics2DServer.set_active(false)
+	get_tree().change_scene("res://Themes/EndScene.tscn")
 	
 #Player Detection
 func _on_PlayerDetection_body_entered(body):

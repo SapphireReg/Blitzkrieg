@@ -326,7 +326,7 @@ script = ExtResource( 4 )
 material = SubResource( 53 )
 frames = SubResource( 41 )
 animation = "WalkDown"
-frame = 2
+frame = 3
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -358,6 +358,7 @@ stream = ExtResource( 5 )
 
 [node name="aggroSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
+volume_db = -10.0
 
 [connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
 [connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

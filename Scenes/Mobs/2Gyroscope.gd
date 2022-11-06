@@ -60,6 +60,7 @@ func _on_DamageDetection_body_entered(body):
 		body.queue_free()
 		hp -= 50
 		if hp <= 0:
+			$AnimatedSprite/DamageDetection/CollisionShape2D.set_deferred("disabled", true)
 			die()
 		else:
 			blink()
