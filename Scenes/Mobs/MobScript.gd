@@ -45,6 +45,7 @@ func compare_y():
 	return y
 	
 func die():
+	$deathSFX.play()
 	sprite.play("Death")
 	set_physics_process(false)
 	yield(get_tree().create_timer(1.8), "timeout")
@@ -54,6 +55,7 @@ func die():
 #Player Detection
 func _on_PlayerDetection_body_entered(body):
 	if body.get_collision_layer_bit(0):
+		$aggroSFX.play()
 		print("player entered")
 		player = body
 		playerIn = true
@@ -62,15 +64,16 @@ func _on_PlayerDetection_body_entered(body):
 func _on_DamageDetection_body_entered(body):
 	print(hp)
 	if body.get_collision_layer_bit(4):
-		print("Damage")
 		body.queue_free()
 		hp -= Global.bulletDmg
 		if hp <= 0:
+			$AnimatedSprite/DamageDetection/CollisionShape2D.set_deferred("disabled", true)
 			die()
 		else:
 			blink()
 
 func blink():
+	$hurtSFX.play()
 	blink.play("Start")
 	yield(get_tree().create_timer(0.2), "timeout")
 	blink.play("Stop")

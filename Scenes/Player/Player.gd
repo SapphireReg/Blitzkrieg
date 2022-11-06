@@ -89,5 +89,5 @@ func death():
 	$AnimatedSprite.play("Death")
 	$hurtSFX.play()
 	$pandoraVoiceSFX.play()
-	yield($AnimatedSprite, "animation_finished")
+	yield(get_tree().create_timer(3), "timeout")
 	get_tree().change_scene("res://Scenes/World/GameOver.tscn")

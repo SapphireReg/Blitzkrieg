@@ -1,9 +1,12 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 4 - Gyroscope.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=3]
 [ext_resource path="res://Scenes/Mobs/2Gyroscope.gd" type="Script" id=4]
+[ext_resource path="res://Audio/2MobDeath1.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/2MobSFXHurt.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/2MobSFX1.wav" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=29]
 shader = ExtResource( 3 )
@@ -192,7 +195,7 @@ script = ExtResource( 4 )
 material = SubResource( 29 )
 frames = SubResource( 17 )
 animation = "Moving"
-frame = 11
+frame = 1
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -215,6 +218,15 @@ shape = SubResource( 32 )
 anims/RESET = SubResource( 33 )
 anims/Start = SubResource( 34 )
 anims/Stop = SubResource( 35 )
+
+[node name="deathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="hurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="aggroSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
 [connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

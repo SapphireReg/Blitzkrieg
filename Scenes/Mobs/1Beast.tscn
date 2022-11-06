@@ -1,215 +1,182 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 2 - Beast.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
+[ext_resource path="res://Audio/1MobDeath1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Mobs/MobScript.gd" type="Script" id=4]
+[ext_resource path="res://WhiteColor.gdshader" type="Shader" id=5]
+[ext_resource path="res://Audio/1MobSFX2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Audio/1MobHurtSFX4.wav" type="AudioStream" id=7]
+
+[sub_resource type="ShaderMaterial" id=93]
+shader = ExtResource( 5 )
+shader_param/active = false
 
 [sub_resource type="AtlasTexture" id=73]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 345, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=74]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 378, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=75]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 411, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=76]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 444, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=77]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 477, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=78]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 510, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=79]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 543, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=80]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 576, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=81]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 609, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=82]
-flags = 2
 atlas = ExtResource( 2 )
 region = Rect2( 642, 2, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=45]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 133, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=46]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 133, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=47]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 133, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=48]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 133, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=49]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 166, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=50]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 166, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=51]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 166, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=52]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 166, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=53]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 100, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=54]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 100, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=55]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 100, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=56]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 100, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=57]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 199, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=58]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 199, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=59]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 199, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=60]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 199, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=61]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 67, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=62]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 67, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=63]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 67, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=64]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 67, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=65]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 1, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=66]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 1, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=67]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 1, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=68]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 1, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=69]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 232, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=70]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 232, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=71]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 232, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=72]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 232, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=83]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1, 34, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=84]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 34, 34, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=85]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 67, 34, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=86]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 100, 34, 32, 32 )
 
@@ -261,18 +228,106 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=44]
+[sub_resource type="RectangleShape2D" id=87]
 extents = Vector2( 16, 16 )
 
-[node name="1Beast" type="Node2D"]
+[sub_resource type="CircleShape2D" id=88]
+radius = 159.013
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="Animation" id=90]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=91]
+resource_name = "Start"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=92]
+resource_name = "Stop"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="1Beast" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 70
+script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 93 )
 frames = SubResource( 43 )
 animation = "WalkDown"
 frame = 3
 playing = true
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="AnimatedSprite"]
+[node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
+collision_layer = 32
+collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/KinematicBody2D"]
-shape = SubResource( 44 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
+shape = SubResource( 87 )
+
+[node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
+visible = false
+shape = SubResource( 88 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 89 )
+
+[node name="BlinkAnimation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 90 )
+anims/Start = SubResource( 91 )
+anims/Stop = SubResource( 92 )
+
+[node name="deathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="hurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="aggroSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]

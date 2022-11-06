@@ -1,9 +1,12 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - World 2 - Guard.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Amiga Amiga CD32 - Chaos Engine Amiga CD32 - Miscellaneous.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Mobs/MobScript.gd" type="Script" id=3]
 [ext_resource path="res://WhiteColor.gdshader" type="Shader" id=4]
+[ext_resource path="res://Audio/ExplosionSFX.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/1MobSFX2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Audio/1MobHurtSFX4.wav" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=130]
 resource_local_to_scene = true
@@ -269,7 +272,7 @@ script = ExtResource( 3 )
 material = SubResource( 130 )
 frames = SubResource( 1 )
 animation = "WalkDown"
-frame = 1
+frame = 5
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -293,6 +296,15 @@ anims/Stop = SubResource( 173 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 174 )
+
+[node name="deathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="hurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="aggroSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_entered" from="AnimatedSprite/DamageDetection" to="." method="_on_DamageDetection_body_entered"]
 [connection signal="body_entered" from="AnimatedSprite/PlayerDetection" to="." method="_on_PlayerDetection_body_entered"]
