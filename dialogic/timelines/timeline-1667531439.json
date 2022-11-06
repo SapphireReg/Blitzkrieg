@@ -49,7 +49,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 0.9
+			"wait_seconds": 0.5
 		},
 		{
 			"animation": "instant_in.gd",
