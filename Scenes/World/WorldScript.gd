@@ -4,7 +4,7 @@ onready var player = get_node("Player")
 onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bullet")
 
 func _ready():
-	pass
+	set_physics_process(true)
 
 func _on_KeyPickUp1_body_entered(body):
 	if body.get_collision_layer_bit(0):

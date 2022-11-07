@@ -16,8 +16,8 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body == get_parent().get_node("Player"):
 		if  currentScene.name == level1:
-			get_tree().change_scene("res://Scenes/World/Lvl2_Under.tscn")
+			SceneChanger.goto_scene("res://Scenes/World/Lvl2_Under.tscn", currentScene)
 		elif currentScene.name == level2:
-			get_tree().change_scene("res://Scenes/World/Lvl3_Deeper.tscn")
+			SceneChanger.goto_scene("res://Scenes/World/Lvl3_Deeper.tscn", currentScene)
 		elif currentScene.name == level3:
-			get_tree().change_scene("res://Scenes/World/Lvl4_Pandora.tscn")
+			SceneChanger.goto_scene("res://Scenes/World/Lvl4_Pandora.tscn", currentScene)
