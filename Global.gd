@@ -11,4 +11,3 @@ var bulletDmg = 50
 func _ready():
 	pass
 
-
