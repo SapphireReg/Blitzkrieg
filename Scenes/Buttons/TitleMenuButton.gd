@@ -17,7 +17,7 @@ func _on_Button_mouse_entered():
 	
 func _on_Button_Pressed():
 	if (self.name == "MenuPlay"):
-		print("PLAY")
+		get_tree().change_scene("res://Themes/LoadingScreen.tscn")
 	elif (self.name == "MenuMainMenu"):
 		get_tree().change_scene("res://Scenes/Buttons/TitleMenuButton.tscn")
 	elif (node != ""):
