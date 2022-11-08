@@ -4483,6 +4483,10 @@ position = Vector2( 1367, 236 )
 position = Vector2( 230, -4 )
 hp = 200
 
+[node name="1Guard4" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 282, 29 )
+hp = 200
+
 [node name="1Frogger" parent="Mobs" instance=ExtResource( 4 )]
 position = Vector2( 1273, -287 )
 
