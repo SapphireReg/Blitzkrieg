@@ -4,6 +4,7 @@ onready var player = get_node("Player")
 onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bullet")
 
 func _ready():
+	check_coins()
 	set_physics_process(true)
 	if get_tree().get_current_scene().name == "Lvl1_Landing":
 		Global.coins = 0
@@ -50,7 +51,6 @@ func remove_blockage(blockage):
 	blockage.queue_free()
 
 func check_coins():
-	$SFX/CoinSFX.play()
 	if Global.coins == 7:
 		Global.bullet_level += 1
 		Global.coins = 0

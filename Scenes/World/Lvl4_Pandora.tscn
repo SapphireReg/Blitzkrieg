@@ -5493,7 +5493,7 @@ hp = 10000
 material = SubResource( 196 )
 frames = SubResource( 221 )
 animation = "WalkDown"
-frame = 1
+frame = 2
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="Mobs/Pandora/AnimatedSprite"]
