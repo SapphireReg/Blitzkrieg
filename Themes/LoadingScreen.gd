@@ -4,6 +4,7 @@ onready var loading_bar = $LoadingBar
 var load_time = 3
 
 func _ready():
+	$AnimationPlayer.play("FadeIn")
 	$Tween.interpolate_property($LoadingBar, "value", 0,100, load_time, Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	$Tween.start()
 	yield($Tween, "tween_completed")
