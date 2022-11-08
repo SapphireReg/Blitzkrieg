@@ -1,6 +1,6 @@
 extends Button
 
-export var reference_path = ""
+export var node: NodePath
 export(bool) var start_focused = false
 
 
@@ -16,8 +16,13 @@ func _on_Button_mouse_entered():
 	grab_focus()
 	
 func _on_Button_Pressed():
-	if (reference_path != ""):
-		get_tree().change_scene(reference_path)
+	if (self.name == "MenuPlay"):
+		print("PLAY")
+	elif (self.name == "MenuMainMenu"):
+		get_tree().change_scene("res://Scenes/Buttons/TitleMenuButton.tscn")
+	elif (node != ""):
+		get_node(node).visible = true
+		self.get_parent().visible = false
 	else:
 		get_tree().quit()
 

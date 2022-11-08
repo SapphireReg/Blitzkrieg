@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/background-game2.png" type="Texture" id=2]
 [ext_resource path="res://Audio/Menu Music - Backio Relax.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Themes/ControlsScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Themes/HowToPlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Buttons/TitleMenuButton.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
@@ -23,16 +25,20 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 1 )
 
-[node name="TitleMenu" type="Control"]
+[node name="TitleScene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TitleMenu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="TitleMenu"]
 margin_right = 1023.0
 margin_bottom = 600.0
 color = Color( 0, 0, 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="TitleMenu"]
 position = Vector2( 513, 305 )
 scale = Vector2( 0.533333, 0.561111 )
 texture = ExtResource( 2 )
@@ -40,7 +46,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="TitleMenu"]
 margin_left = 42.0
 margin_top = 119.0
 margin_right = 969.0
@@ -50,7 +56,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Blitzkrieg"
 align = 1
 
-[node name="MenuPlay" parent="." instance=ExtResource( 11 )]
+[node name="MenuPlay" parent="TitleMenu" instance=ExtResource( 11 )]
 margin_left = 450.0
 margin_top = 301.0
 margin_right = 565.0
@@ -58,10 +64,9 @@ margin_bottom = 337.0
 custom_fonts/font = SubResource( 10 )
 text = "Play"
 flat = true
-reference_path = "res://Themes/DialogScene.tscn"
 start_focused = true
 
-[node name="MenuHowToPlay" parent="." instance=ExtResource( 11 )]
+[node name="MenuHowToPlay" parent="TitleMenu" instance=ExtResource( 11 )]
 margin_left = 451.0
 margin_top = 348.0
 margin_right = 566.0
@@ -69,9 +74,9 @@ margin_bottom = 384.0
 custom_fonts/font = SubResource( 7 )
 text = "How to Play"
 flat = true
-reference_path = "res://Themes/HowToPlay.tscn"
+node = NodePath("../../HowToplay")
 
-[node name="MenuControls" parent="." instance=ExtResource( 11 )]
+[node name="MenuControls" parent="TitleMenu" instance=ExtResource( 11 )]
 margin_left = 451.0
 margin_top = 396.0
 margin_right = 566.0
@@ -79,9 +84,9 @@ margin_bottom = 432.0
 custom_fonts/font = SubResource( 8 )
 text = "Controls"
 flat = true
-reference_path = "res://Themes/ControlsScene.tscn"
+node = NodePath("../../Controls")
 
-[node name="MenuExit" parent="." instance=ExtResource( 11 )]
+[node name="MenuExit" parent="TitleMenu" instance=ExtResource( 11 )]
 margin_left = 451.0
 margin_top = 444.0
 margin_right = 566.0
@@ -90,6 +95,21 @@ custom_fonts/font = SubResource( 9 )
 text = "Exit"
 flat = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TitleMenu"]
 stream = ExtResource( 3 )
 autoplay = true
+
+[node name="Controls" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Button" parent="Controls" index="2"]
+node = NodePath("../../TitleMenu")
+
+[node name="HowToplay" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Button" parent="HowToplay" index="2"]
+node = NodePath("../../TitleMenu")
+
+[editable path="Controls"]
+[editable path="HowToplay"]
