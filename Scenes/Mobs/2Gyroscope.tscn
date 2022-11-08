@@ -196,7 +196,7 @@ script = ExtResource( 4 )
 material = SubResource( 29 )
 frames = SubResource( 17 )
 animation = "Moving"
-frame = 10
+frame = 7
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -204,15 +204,18 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
+visible = false
 shape = SubResource( 30 )
 
 [node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
+visible = false
 shape = SubResource( 31 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 32 )
 
 [node name="BlinkAnimation" type="AnimationPlayer" parent="."]

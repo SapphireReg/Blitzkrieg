@@ -293,7 +293,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 45 )
 frames = SubResource( 1 )
-animation = "WalkLeft"
+animation = "WalkDown"
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -301,15 +301,18 @@ collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/DamageDetection"]
+visible = false
 shape = SubResource( 46 )
 
 [node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]
+visible = false
 shape = SubResource( 47 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 48 )
 
 [node name="BlinkAnimation" type="AnimationPlayer" parent="."]
