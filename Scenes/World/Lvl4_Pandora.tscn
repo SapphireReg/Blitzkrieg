@@ -5446,6 +5446,7 @@ position = Vector2( 13, -287 )
 
 [node name="1RockMan" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 478, 131 )
+hp = 300
 
 [node name="2Gyroscope" parent="Mobs" instance=ExtResource( 4 )]
 position = Vector2( -429, 317 )
@@ -5479,6 +5480,8 @@ position = Vector2( 425, 525 )
 
 [node name="2Robot3" parent="Mobs" instance=ExtResource( 2 )]
 position = Vector2( -454, 117 )
+speed = 60
+hp = 250
 
 [node name="Pandora" type="KinematicBody2D" parent="Mobs"]
 position = Vector2( -1, 875 )
@@ -5493,7 +5496,7 @@ hp = 10000
 material = SubResource( 196 )
 frames = SubResource( 221 )
 animation = "WalkDown"
-frame = 1
+frame = 2
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="Mobs/Pandora/AnimatedSprite"]
