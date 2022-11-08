@@ -5,6 +5,12 @@ onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bul
 
 func _ready():
 	set_physics_process(true)
+	if get_tree().get_current_scene().name == "Lvl1_Landing":
+		Global.coins = 0
+		Global.bullet_level = 1
+		Global.playerHp = 100
+		Global.bulletDmg = 50
+		$Player.hp_update(Global.playerHp)
 
 func _on_KeyPickUp1_body_entered(body):
 	if body.get_collision_layer_bit(0):

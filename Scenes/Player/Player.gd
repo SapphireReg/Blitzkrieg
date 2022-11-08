@@ -11,6 +11,7 @@ onready var blink = $BlinkAnimation
 
 func _ready():
 	hpBar.value = Global.playerHp
+	hp_update(Global.playerHp)
 	
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -77,6 +78,7 @@ func _on_HitBox_body_entered(body):
 		print(Global.playerHp)
 		if Global.playerHp <= 0:
 			death()
+			
 
 func blink():
 	$hurtSFX.play()
