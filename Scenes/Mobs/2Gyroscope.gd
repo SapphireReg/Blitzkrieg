@@ -1,8 +1,7 @@
 extends KinematicBody2D
 
-var speed = 50
-var hp_max: int = 100
-var hp: int = hp_max
+export var speed = 50
+export var hp: int = 100
 
 var motion = Vector2.ZERO
 var player = null 

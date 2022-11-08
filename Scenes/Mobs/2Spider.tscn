@@ -8,6 +8,7 @@
 [ext_resource path="res://Audio/1MobHurtSFX3.wav" type="AudioStream" id=6]
 
 [sub_resource type="ShaderMaterial" id=38]
+resource_local_to_scene = true
 shader = ExtResource( 3 )
 shader_param/active = false
 

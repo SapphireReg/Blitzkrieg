@@ -5199,19 +5199,264 @@ position = Vector2( 1534, 627 )
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="1RockMan" parent="Mobs" instance=ExtResource( 4 )]
-position = Vector2( 322, 95 )
+position = Vector2( 357, 74 )
+speed = 60
+hp = 300
+
+[node name="1RockMan13" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 389, 873 )
+speed = 60
+hp = 300
+
+[node name="1RockMan10" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1004, -179 )
+speed = 60
+hp = 300
+
+[node name="1RockMan11" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 987, 121 )
+speed = 60
+hp = 300
+
+[node name="1RockMan12" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 798, 513 )
+speed = 60
+hp = 300
+
+[node name="1RockMan2" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 532, 669 )
+speed = 60
+hp = 300
+
+[node name="1RockMan3" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 355, 494 )
+speed = 60
+hp = 300
+
+[node name="1RockMan4" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1254, 546 )
+speed = 60
+hp = 300
+
+[node name="1RockMan5" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1022, 608 )
+speed = 60
+hp = 300
+
+[node name="1RockMan6" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1771, 690 )
+speed = 60
+hp = 300
+
+[node name="1RockMan7" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1534, 687 )
+speed = 60
+hp = 300
+
+[node name="1RockMan8" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1684, 532 )
+speed = 60
+hp = 300
+
+[node name="1RockMan9" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1281, -168 )
+speed = 60
+hp = 300
 
 [node name="2Gyroscope" parent="Mobs" instance=ExtResource( 5 )]
-position = Vector2( 521, 12 )
+position = Vector2( 1540, -118 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope8" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1429, 85 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope9" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 546, 393 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope10" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 358, 18 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope11" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( -12, 538 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope12" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( -4, 395 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope2" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 789, -145 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope3" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 622, 148 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope4" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1246, 670 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope5" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 920, 499 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope6" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1193, 658 )
+speed = 60
+hp = 150
+
+[node name="2Gyroscope7" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1732, 632 )
+speed = 60
+hp = 150
 
 [node name="2Halftrak" parent="Mobs" instance=ExtResource( 2 )]
-position = Vector2( 250, -163 )
+position = Vector2( 339, -218 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak3" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1535.9, -183.364 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak4" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1631, 171 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak5" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1033, 687 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak6" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 269, 671 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak7" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( -53, 492 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak8" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1618, 630 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak9" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1446, 2 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak10" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 305, 416 )
+speed = 70
+hp = 150
+
+[node name="2Halftrak2" parent="Mobs" instance=ExtResource( 2 )]
+position = Vector2( 1222, 20 )
+speed = 70
+hp = 150
 
 [node name="2Spider" parent="Mobs" instance=ExtResource( 7 )]
-position = Vector2( 735, -57 )
+position = Vector2( 629, 81 )
+speed = 70
+
+[node name="2Spider2" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 1231, 86 )
+speed = 70
+
+[node name="2Spider3" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 1067, 498 )
+speed = 70
+
+[node name="2Spider4" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 36, 341 )
+speed = 70
+
+[node name="2Spider5" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 391, 323 )
+speed = 70
+
+[node name="2Spider6" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 466, 540 )
+speed = 70
+
+[node name="2Spider7" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 601, 306 )
+speed = 70
+
+[node name="2Spider8" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 1356, -84 )
+speed = 70
+
+[node name="2Spider9" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 1830, 567 )
+speed = 70
+
+[node name="2Spider10" parent="Mobs" instance=ExtResource( 7 )]
+position = Vector2( 295, 903 )
+speed = 70
 
 [node name="2Robot" parent="Mobs" instance=ExtResource( 6 )]
 position = Vector2( 588, -193 )
+speed = 70
+hp = 300
+
+[node name="2Robot3" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1701, 695 )
+speed = 70
+hp = 300
+
+[node name="2Robot4" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1035, -90 )
+speed = 70
+hp = 300
+
+[node name="2Robot5" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 894, 119 )
+speed = 70
+hp = 300
+
+[node name="2Robot6" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( -51, 417 )
+speed = 70
+hp = 300
+
+[node name="2Robot7" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 447, 910 )
+speed = 70
+hp = 300
+
+[node name="2Robot8" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1451, -139 )
+speed = 70
+hp = 300
+
+[node name="2Robot9" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1715, 567 )
+speed = 70
+hp = 300
+
+[node name="2Robot2" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 218, -224 )
+speed = 70
+hp = 300
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1, -1 )
