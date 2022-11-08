@@ -4641,66 +4641,53 @@ position = Vector2( 41, 650 )
 
 [node name="1Guard" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 292, 67 )
-collision_mask = 7
 hp = 200
 
 [node name="1Guard16" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1720, 217 )
-collision_mask = 7
 speed = 60
 hp = 300
 
 [node name="1Guard13" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1573, 802 )
-collision_mask = 7
 hp = 200
 
 [node name="1Guard14" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 53, 836 )
-collision_mask = 7
 
 [node name="1Guard15" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 46, 306 )
-collision_mask = 7
 speed = 70
 hp = 200
 
 [node name="1Guard5" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1109, 848 )
-collision_mask = 7
 
 [node name="1Guard12" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1109, 848 )
-collision_mask = 7
 hp = 150
 
 [node name="1Guard6" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1940, 616 )
-collision_mask = 7
 
 [node name="1Guard7" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 593, 774 )
-collision_mask = 7
 hp = 300
 
 [node name="1Guard8" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 2029, 116 )
-collision_mask = 7
 
 [node name="1Guard9" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1740, -241 )
-collision_mask = 7
 speed = 60
 hp = 200
 
 [node name="1Guard10" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1124, -151 )
-collision_mask = 7
 hp = 200
 
 [node name="1Guard11" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 665, 12 )
-collision_mask = 7
 
 [node name="1Guard4" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 295, 305 )

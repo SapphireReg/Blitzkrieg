@@ -272,7 +272,7 @@ script = ExtResource( 3 )
 material = SubResource( 130 )
 frames = SubResource( 1 )
 animation = "WalkDown"
-frame = 1
+frame = 4
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]

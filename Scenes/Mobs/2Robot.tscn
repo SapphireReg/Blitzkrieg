@@ -9,6 +9,7 @@
 [ext_resource path="res://Audio/ExplosionSFX.wav" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=53]
+resource_local_to_scene = true
 shader = ExtResource( 3 )
 shader_param/active = false
 
@@ -326,7 +327,7 @@ script = ExtResource( 4 )
 material = SubResource( 53 )
 frames = SubResource( 41 )
 animation = "WalkDown"
-frame = 3
+frame = 4
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]
@@ -337,6 +338,7 @@ collision_mask = 16
 shape = SubResource( 54 )
 
 [node name="PlayerDetection" type="Area2D" parent="AnimatedSprite"]
+visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite/PlayerDetection"]

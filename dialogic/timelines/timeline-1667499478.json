@@ -17,7 +17,7 @@
 			"value": ""
 		},
 		{
-			"change_scene": "res://Scenes/World/Lvl1_Landing.tscn",
+			"change_scene": "res://Themes/LoadingScreen.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
@@ -371,7 +371,7 @@
 			"waiting_skippable": false
 		},
 		{
-			"change_scene": "res://Scenes/World/Lvl1_Landing.tscn",
+			"change_scene": "res://Themes/LoadingScreen.tscn",
 			"event_id": "dialogic_041"
 		},
 		{
