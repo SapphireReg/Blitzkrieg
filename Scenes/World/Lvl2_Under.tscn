@@ -4640,7 +4640,66 @@ position = Vector2( 41, 650 )
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="1Guard" parent="Mobs" instance=ExtResource( 3 )]
-position = Vector2( 296, 15 )
+position = Vector2( 292, 67 )
+collision_mask = 7
+hp = 200
+
+[node name="1Guard16" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1720, 217 )
+collision_mask = 7
+speed = 60
+hp = 300
+
+[node name="1Guard13" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1573, 802 )
+collision_mask = 7
+hp = 200
+
+[node name="1Guard14" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 53, 836 )
+collision_mask = 7
+
+[node name="1Guard15" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 46, 306 )
+collision_mask = 7
+speed = 70
+hp = 200
+
+[node name="1Guard5" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1109, 848 )
+collision_mask = 7
+
+[node name="1Guard12" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1109, 848 )
+collision_mask = 7
+hp = 150
+
+[node name="1Guard6" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1940, 616 )
+collision_mask = 7
+
+[node name="1Guard7" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 593, 774 )
+collision_mask = 7
+hp = 300
+
+[node name="1Guard8" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 2029, 116 )
+collision_mask = 7
+
+[node name="1Guard9" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1740, -241 )
+collision_mask = 7
+speed = 60
+hp = 200
+
+[node name="1Guard10" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 1124, -151 )
+collision_mask = 7
+hp = 200
+
+[node name="1Guard11" parent="Mobs" instance=ExtResource( 3 )]
+position = Vector2( 665, 12 )
 collision_mask = 7
 
 [node name="1Guard4" parent="Mobs" instance=ExtResource( 3 )]
@@ -4652,15 +4711,140 @@ script = SubResource( 126 )
 
 [node name="1Guard2" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 573, 92 )
+hp = 200
 
 [node name="1Guard3" parent="Mobs" instance=ExtResource( 3 )]
 position = Vector2( 1091, 608 )
+hp = 250
 
 [node name="1Kangaroo" parent="Mobs" instance=ExtResource( 4 )]
 position = Vector2( 832, 253 )
+speed = 70
+
+[node name="1Kangaroo2" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1729, 404 )
+speed = 70
+
+[node name="1Kangaroo3" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 2050, 63 )
+speed = 70
+
+[node name="1Kangaroo4" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 812, 73 )
+speed = 70
+
+[node name="1Kangaroo11" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1423, 86 )
+speed = 70
+
+[node name="1Kangaroo12" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 310, 684 )
+speed = 70
+
+[node name="1Kangaroo13" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 2092, 111 )
+speed = 70
+
+[node name="1Kangaroo14" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 601, 28 )
+speed = 70
+
+[node name="1Kangaroo5" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1871, 626 )
+speed = 70
+
+[node name="1Kangaroo6" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1587, 713 )
+speed = 70
+
+[node name="1Kangaroo7" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 521, 803 )
+speed = 70
+
+[node name="1Kangaroo8" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 16, 790 )
+speed = 70
+
+[node name="1Kangaroo9" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 304, 754 )
+speed = 70
+
+[node name="1Kangaroo10" parent="Mobs" instance=ExtResource( 4 )]
+position = Vector2( 1211, -101 )
+speed = 70
 
 [node name="1LizardMan" parent="Mobs" instance=ExtResource( 5 )]
 position = Vector2( 1665, 83 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan2" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1078, 674 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan3" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1200, 751 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan4" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1650, 778 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan7" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 814, 650 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan8" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 2013, 594 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan9" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1593, 548 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan5" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1938, 76 )
+speed = 70
+hp = 150
+
+[node name="1LizardMan6" parent="Mobs" instance=ExtResource( 5 )]
+position = Vector2( 1770, -164 )
+speed = 70
+hp = 150
+
+[node name="1Frogger2" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 291, 9 )
+speed = 70
+
+[node name="1Frogger3" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 104, 288 )
+speed = 70
+
+[node name="1Frogger4" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1762, -294 )
+speed = 70
+
+[node name="1Frogger5" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 582, 624 )
+speed = 70
+
+[node name="1Frogger6" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 903, 800 )
+speed = 70
+
+[node name="1Frogger7" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1121, 169 )
+speed = 70
+
+[node name="1Frogger8" parent="Mobs" instance=ExtResource( 6 )]
+position = Vector2( 1922, 143 )
+speed = 70
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
