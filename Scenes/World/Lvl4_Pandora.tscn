@@ -5644,7 +5644,7 @@ self_modulate = Color( 0.952941, 0.407843, 0.258824, 1 )
 material = SubResource( 196 )
 frames = SubResource( 221 )
 animation = "WalkDown"
-frame = 3
+frame = 1
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="Mobs/Pandora/AnimatedSprite"]

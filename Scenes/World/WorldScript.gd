@@ -59,11 +59,12 @@ func check_coins():
 		upgrade.get_node("RewardSFX").play()
 		Global.bullet_level += 1
 		Global.coins = 0
-		if Global.bullet_level == 2:
+	if Global.bullet_level == 2:
 			Global.bulletDmg = 75
 			Global.BULLET = preload("res://Scenes/Player/Bullet2.tscn")
 			HUDBullet.play("Bullet2")
-		elif Global.bullet_level == 3:
+	elif Global.bullet_level == 3:
 			Global.bulletDmg = 150
 			Global.BULLET = preload("res://Scenes/Player/Bullet3.tscn")
 			HUDBullet.play("Bullet3")
+		

@@ -5406,7 +5406,7 @@ position = Vector2( 1356, -84 )
 speed = 70
 
 [node name="2Spider9" parent="Mobs" instance=ExtResource( 7 )]
-position = Vector2( 1830, 567 )
+position = Vector2( 1786, 569 )
 speed = 70
 
 [node name="2Spider10" parent="Mobs" instance=ExtResource( 7 )]

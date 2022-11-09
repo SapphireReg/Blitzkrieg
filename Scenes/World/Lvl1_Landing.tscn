@@ -4592,6 +4592,7 @@ speed = 70
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+volume_db = -20.0
 autoplay = true
 
 [node name="SFX" type="Node2D" parent="."]
