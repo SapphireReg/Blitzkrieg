@@ -2,6 +2,7 @@ extends Node2D
 
 onready var player = get_node("Player")
 onready var HUDBullet = get_tree().get_current_scene().get_node("HUDNode/HUD/Bullet")
+onready var upgrade = get_tree().get_current_scene().get_node("HUDNode/HUD/Upgrade")
 
 func _ready():
 	check_coins()
@@ -52,6 +53,10 @@ func remove_blockage(blockage):
 
 func check_coins():
 	if Global.coins == 7:
+		upgrade.show()
+		yield(get_tree().create_timer(.5), "timeout")
+		upgrade.hide()
+		upgrade.get_node("RewardSFX").play()
 		Global.bullet_level += 1
 		Global.coins = 0
 		if Global.bullet_level == 2:

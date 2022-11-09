@@ -62,7 +62,6 @@ func _on_PlayerDetection_body_entered(body):
 
 #Damage
 func _on_DamageDetection_body_entered(body):
-	print(hp)
 	if body.get_collision_layer_bit(4):
 		body.queue_free()
 		hp -= Global.bulletDmg

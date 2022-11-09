@@ -12,3 +12,4 @@ func load_coins():
 	else:
 		$CoinSlot.visible = true
 		$CoinSlot.rect_size.y = Global.coins * 13
+		
