@@ -405,7 +405,6 @@ script = ExtResource( 2 )
 material = SubResource( 47 )
 frames = SubResource( 17 )
 animation = "WalkRight"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
