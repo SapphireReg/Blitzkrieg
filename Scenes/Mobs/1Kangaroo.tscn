@@ -9,6 +9,7 @@
 [ext_resource path="res://Audio/1MobHurtSFX4.wav" type="AudioStream" id=7]
 
 [sub_resource type="ShaderMaterial" id=45]
+resource_local_to_scene = true
 shader = ExtResource( 3 )
 shader_param/active = false
 
@@ -294,6 +295,7 @@ script = ExtResource( 4 )
 material = SubResource( 45 )
 frames = SubResource( 1 )
 animation = "WalkDown"
+frame = 1
 playing = true
 
 [node name="DamageDetection" type="Area2D" parent="AnimatedSprite"]

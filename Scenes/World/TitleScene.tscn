@@ -39,58 +39,55 @@ margin_bottom = 600.0
 color = Color( 0, 0, 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="TitleMenu"]
-position = Vector2( 513, 305 )
-scale = Vector2( 0.533333, 0.561111 )
+position = Vector2( 511, 300.5 )
+scale = Vector2( 0.533333, 0.553704 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Label" type="Label" parent="TitleMenu"]
-margin_left = 42.0
-margin_top = 119.0
-margin_right = 969.0
-margin_bottom = 263.0
+margin_left = 56.0
+margin_top = 72.0
+margin_right = 983.0
+margin_bottom = 216.0
 custom_colors/font_color = Color( 0.333333, 0.14902, 0.137255, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Blitzkrieg"
 align = 1
 
 [node name="MenuPlay" parent="TitleMenu" instance=ExtResource( 11 )]
-margin_left = 450.0
-margin_top = 301.0
-margin_right = 565.0
-margin_bottom = 337.0
+margin_left = 448.0
+margin_top = 288.0
+margin_right = 563.0
+margin_bottom = 324.0
 custom_fonts/font = SubResource( 10 )
 text = "Play"
 flat = true
 start_focused = true
 
 [node name="MenuHowToPlay" parent="TitleMenu" instance=ExtResource( 11 )]
-margin_left = 451.0
-margin_top = 348.0
-margin_right = 566.0
-margin_bottom = 384.0
+margin_left = 449.0
+margin_top = 335.0
+margin_right = 564.0
+margin_bottom = 371.0
 custom_fonts/font = SubResource( 7 )
 text = "How to Play"
 flat = true
 node = NodePath("../../HowToplay")
 
 [node name="MenuControls" parent="TitleMenu" instance=ExtResource( 11 )]
-margin_left = 451.0
-margin_top = 396.0
-margin_right = 566.0
-margin_bottom = 432.0
+margin_left = 449.0
+margin_top = 383.0
+margin_right = 564.0
+margin_bottom = 419.0
 custom_fonts/font = SubResource( 8 )
 text = "Controls"
 flat = true
 node = NodePath("../../Controls")
 
 [node name="MenuExit" parent="TitleMenu" instance=ExtResource( 11 )]
-margin_left = 451.0
-margin_top = 444.0
-margin_right = 566.0
-margin_bottom = 480.0
+margin_left = 449.0
+margin_top = 431.0
+margin_right = 564.0
+margin_bottom = 467.0
 custom_fonts/font = SubResource( 9 )
 text = "Exit"
 flat = true

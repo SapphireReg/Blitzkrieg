@@ -20,9 +20,6 @@ anchor_bottom = 1.0
 position = Vector2( 511, 300.5 )
 scale = Vector2( 0.532292, 0.556481 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 303.0

@@ -2,10 +2,12 @@ extends Button
 
 export var node: NodePath
 export(bool) var start_focused = false
+#onready var menu = get_parent().get_parent().get_node("TitleMenu")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#menu.visible = true
 	if(start_focused):
 		grab_focus()
 	
@@ -19,7 +21,8 @@ func _on_Button_Pressed():
 	if (self.name == "MenuPlay"):
 		get_tree().change_scene("res://Themes/DialogScene.tscn")
 	elif (self.name == "MenuMainMenu"):
-		get_tree().change_scene("res://Scenes/Buttons/TitleMenuButton.tscn")
+		get_tree().change_scene("res://Scenes/World/TitleScene.tscn")
+		#get_tree().change_scene("res://Scenes/Buttons/TitleMenuButton.tscn")
 	elif (node != ""):
 		get_node(node).visible = true
 		self.get_parent().visible = false
